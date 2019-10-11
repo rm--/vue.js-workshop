@@ -2,7 +2,7 @@
   <v-app id="app">
     <div>
       <v-btn to="Search">Search</v-btn>
-      <v-btn to="Detail">Details</v-btn>
+      <v-btn :to="{name: 'details', params: {id: '42'}}">Details</v-btn>
     </div>
     <router-view></router-view>
   </v-app>

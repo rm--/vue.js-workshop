@@ -14,6 +14,9 @@ import drawing from "@/components/drawing";
 export default {
   name: "drawingDetails",
   components: { drawing },
+  mounted() {
+    this.drawing.date = this.$route.params.id
+  },
   data() {
     return {
       drawing: {date: "Hey"}
