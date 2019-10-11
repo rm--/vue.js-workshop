@@ -17,7 +17,18 @@
 <script>
 export default {
   name: "drawing",
-  props: ["value"],
+  props: {
+    value: {
+      type: Object,
+      required: true,
+      default: () => ({
+        date: "this is a dummy"
+      }),
+      validator: function (givenDrawing) {
+        return givenDrawing.date != null && givenDrawing != undefined
+      }
+    }
+  },
   data: () => ({
     /*value: {
       date: "2018-01-05",
