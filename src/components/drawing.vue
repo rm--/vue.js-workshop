@@ -2,7 +2,11 @@
   <div id="drawing">
     <div>{{value.date}}</div>
     <div>
-      <span v-for="(item,index) in value.numbers" :key="index">{{item}} </span>
+      <span v-for="(item,index) in value.numbers" :key="index">
+        {{item}}
+         </span>
+         <span v-if="index == value.numbers.length -1"></span>
+         <span v-else>[ ]</span>
     </div>
     <div>
       <span v-for="(item,index) in value.extranumbers" :key="index">{{item}} </span>
