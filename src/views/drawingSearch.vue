@@ -26,42 +26,42 @@ import drawing from "../components/drawing";
 export default {
   name: "drawingSearch",
   components: { drawing },
+  created() {
+    this.drawings = [
+      {
+        date: "2018-01-05",
+        extranumbers: [10, 7],
+        numbers: [40, 2, 38, 45, 7]
+      },
+      {
+        date: "2018-01-06",
+        extranumbers: [10, 7],
+        numbers: [40, 2, 38, 45, 7]
+      },
+      {
+        date: "2018-01-07",
+        extranumbers: [10, 7],
+        numbers: [40, 2, 38, 45, 7]
+      },
+      {
+        date: "2018-01-08",
+        extranumbers: [10, 7],
+        numbers: [40, 2, 38, 45, 7]
+      },
+      {
+        date: "2018-01-09",
+        extranumbers: [10, 7],
+        numbers: [40, 2, 38, 45, 7]
+      }
+    ];
+  },
   computed: {
     visibleDrawings() {
       return this.drawings.filter(d => d.date.includes(this.searchText));
     }
   },
   data() {
-    return {
-      searchText: "",
-      drawings: [
-        {
-          date: "2018-01-05",
-          extranumbers: [10, 7],
-          numbers: [40, 2, 38, 45, 7]
-        },
-        {
-          date: "2018-01-06",
-          extranumbers: [10, 7],
-          numbers: [40, 2, 38, 45, 7]
-        },
-        {
-          date: "2018-01-07",
-          extranumbers: [10, 7],
-          numbers: [40, 2, 38, 45, 7]
-        },
-        {
-          date: "2018-01-08",
-          extranumbers: [10, 7],
-          numbers: [40, 2, 38, 45, 7]
-        },
-        {
-          date: "2018-01-09",
-          extranumbers: [10, 7],
-          numbers: [40, 2, 38, 45, 7]
-        }
-      ]
-    };
+    return { searchText: "" };
   }
 };
 </script>
