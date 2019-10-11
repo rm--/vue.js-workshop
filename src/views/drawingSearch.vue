@@ -10,7 +10,7 @@
     </v-row>
     <v-row>
       <v-col v-for="(item,index) in visibleDrawings" :key="index" xs="6" sm="6" md="4">
-        <v-card>
+        <v-card @click="showDetails(item)">
           <v-card-text>
             <drawing :value="item"></drawing>
           </v-card-text>
@@ -37,6 +37,11 @@ export default {
   },
   data() {
     return { searchText: "" };
+  },
+  methods: {
+    showDetails(drawing) {
+      this.$router.push({name: "details", params: {drawing: drawing}})
+    }
   }
 };
 </script>
