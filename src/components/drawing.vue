@@ -6,7 +6,7 @@
         {{item}}
          </v-chip>
          <span v-if="index == value.numbers.length -1"></span>
-         <span v-else>[ ]</span>
+         <span v-else>(🙋🏼‍♂️)</span>
     </div>
     <div>
       <v-chip color="primary" v-for="(item,index) in value.extranumbers" :key="index">{{item}} </v-chip>
