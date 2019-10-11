@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <drawing :value="drawingData"></drawing>
+    <drawing v-bind:value="drawingData"></drawing>
   </div>
 </template>
 
