@@ -1,11 +1,23 @@
 <template>
   <div id="app">
+    <drawing></drawing>
   </div>
 </template>
 
+<script>
+import drawing from "./components/drawing";
+
+export default {
+  name: "app",
+  components: {
+    drawing
+  }
+};
+</script>
+
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
