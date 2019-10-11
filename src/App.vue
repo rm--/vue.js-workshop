@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <drawing v-bind:value="drawingData"></drawing>
-  </div>
+  </v-app>
 </template>
 
 <script>
