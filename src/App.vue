@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import drawingSearch from "./views/drawingSearch";
+import drawingSearch from "@/views/drawingSearch";
 
 export default {
   name: "app",

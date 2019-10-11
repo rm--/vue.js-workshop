@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import drawing from "../components/drawing";
-import drawingService from "../services/drawingService";
+import drawing from "@/components/drawing";
+import drawingService from "@/services/drawingService";
 
 export default {
   name: "drawingSearch",
