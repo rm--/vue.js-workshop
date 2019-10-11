@@ -14,7 +14,12 @@ export default new Router({
     },{
       path: "/details",
       name: "details",
-      component: drawingDetails
+      component: drawingDetails,
+      beforeEnter: (to, from, next) => {
+        if(to.params.drawing != undefined){
+          next()
+        }
+      }
     },
     {
       path: "*",
