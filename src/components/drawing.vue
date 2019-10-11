@@ -2,14 +2,14 @@
   <div id="drawing">
     <div>{{value.date}}</div>
     <div>
-      <span v-for="(item,index) in value.numbers" :key="index">
+      <v-chip v-for="(item,index) in value.numbers" :key="index">
         {{item}}
-         </span>
+         </v-chip>
          <span v-if="index == value.numbers.length -1"></span>
          <span v-else>[ ]</span>
     </div>
     <div>
-      <span v-for="(item,index) in value.extranumbers" :key="index">{{item}} </span>
+      <v-chip color="primary" v-for="(item,index) in value.extranumbers" :key="index">{{item}} </v-chip>
     </div>
   </div>
 </template>
