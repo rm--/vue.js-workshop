@@ -1,25 +1,16 @@
 <template>
   <v-app id="app">
-    <drawing v-bind:value="drawingData"></drawing>
+    <drawingSearch></drawingSearch>
   </v-app>
 </template>
 
 <script>
-import drawing from "./components/drawing";
+import drawingSearch from "./views/drawingSearch";
 
 export default {
   name: "app",
   components: {
-    drawing
-  },
-  data() {
-    return {
-      drawingData: {
-        date: "2018-01-05",
-        extranumbers: [10, 7],
-        numbers: [40, 2, 38, 45, 7]
-      }
-    };
+    drawingSearch
   }
 };
 </script>
