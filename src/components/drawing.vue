@@ -4,12 +4,12 @@
     <div>
       <v-chip v-for="(item,index) in value.numbers" :key="index">
         {{item}}
-         </v-chip>
-         <span v-if="index == value.numbers.length -1"></span>
-         <span v-else>(🙋🏼‍♂️)</span>
+        <span v-if="index == value.numbers.length -1"></span>
+        <span v-else>(🙋🏼‍♂️)</span>
+      </v-chip>
     </div>
     <div>
-      <v-chip color="primary" v-for="(item,index) in value.extranumbers" :key="index">{{item}} </v-chip>
+      <v-chip color="primary" v-for="(item,index) in value.extranumbers" :key="index">{{item}}</v-chip>
     </div>
   </div>
 </template>
@@ -24,8 +24,8 @@ export default {
       default: () => ({
         date: "this is a dummy"
       }),
-      validator: function (givenDrawing) {
-        return givenDrawing.date != null && givenDrawing != undefined
+      validator: function(givenDrawing) {
+        return givenDrawing.date != null && givenDrawing != undefined;
       }
     }
   },
