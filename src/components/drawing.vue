@@ -22,7 +22,7 @@ export default {
       type: Object,
       required: true,
       default: () => ({
-        date: "this is a dummy"
+        date: "nothing to see here"
       }),
       validator: function(givenDrawing) {
         return givenDrawing.date != null && givenDrawing != undefined;
