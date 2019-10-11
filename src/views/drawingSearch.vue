@@ -4,7 +4,7 @@
       <v-toolbar>
         <v-toolbar-title>drawings</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-text-field v-on:keyup.enter="search" v-model="searchText"></v-text-field>
+        <v-text-field v-model="searchText"></v-text-field>
         <v-icon>mdi-magnify</v-icon>
       </v-toolbar>
     </v-row>
@@ -26,16 +26,14 @@ import drawing from "../components/drawing";
 export default {
   name: "drawingSearch",
   components: { drawing },
-  watch: {
-    searchText(e) {
-        console.log(e)
-        this.visibleDrawings = this.drawings.filter(d => d.date.includes(this.searchText))
+  computed: {
+    visibleDrawings() {
+      return this.drawings.filter(d => d.date.includes(this.searchText));
     }
   },
   data() {
     return {
       searchText: "",
-      visibleDrawings: [],
       drawings: [
         {
           date: "2018-01-05",
