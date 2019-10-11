@@ -1,6 +1,10 @@
 <template>
   <v-app id="app">
-    <drawingSearch></drawingSearch>
+    <div>
+      <v-btn to="Search">Search</v-btn>
+      <v-btn to="Detail">Details</v-btn>
+    </div>
+    <router-view></router-view>
   </v-app>
 </template>
 
