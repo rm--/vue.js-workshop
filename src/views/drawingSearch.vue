@@ -27,8 +27,8 @@ import drawingService from "@/services/drawingService";
 export default {
   name: "drawingSearch",
   components: { drawing },
-  created() {
-    this.drawings = drawingService.getDrawings();
+  async created() {
+    this.drawings = await drawingService.getDrawings();
   },
   computed: {
     visibleDrawings() {
@@ -36,11 +36,11 @@ export default {
     }
   },
   data() {
-    return { searchText: "" };
+    return { searchText: "", drawings: [] };
   },
   methods: {
     showDetails(drawing) {
-      this.$router.push({name: "details", params: {drawing: drawing}})
+      this.$router.push({ name: "details", params: { drawing: drawing } });
     }
   }
 };
